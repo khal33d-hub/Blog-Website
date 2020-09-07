@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-
+      <!-- jQuery library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!-- Alternative to Bootstrap 3 Glyphicons -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
-
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         {# MEDIUM STYLE EDITOR#}
     <script src="//cdn.jsdelivr.net/medium-editor/latest/js/medium-editor.min.js"></script>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/medium-editor/latest/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
@@ -31,94 +31,78 @@
 
   <body>
 {% comment %}
-
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-  integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-
-
-<!-- Alternative to Bootstrap 3 Glyphicons -->
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 
 {% endcomment %}
 
+      <nav class="navbar navbar-expand-md bg-dark navbar-dark techfont">
+      <!-- Brand -->
+      <div class="container-fluid">
+        <a class="navbar-brand bigbrand" href="{% url 'home' %}">My Nature blog</a>
+
+          <!-- Toggler/collapsibe Button -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Navbar links-->
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+          <a class="nav-link" href="{% url 'post_list' %}">Posts
+          </a>
+        </li>
+
+        <ul class="navbar-nav">
+
+	    <!-- Dropdown -->
+    	    <li class="nav-item dropdown">
+    	      <a class="nav-link dropdown-toggle" href="{% url 'about' %}" id="navbardrop" data-toggle="dropdown">
+    	        About
+    	      </a>
+    	      <div class="dropdown-menu">
+    	        <a class="dropdown-item" href="https://github.com/khal33d-hub" target="_blank">Github</a>
+    	        <a class="dropdown-item" href="https://www.linkedin.com/in/khaleed-oyeleke-27b182195/" target="_blank">LinkedIn</a>
+    	      </div>
+    	    </li>
+    	  </ul>
 
 
 
-{% comment %}
-"fixes notes"
-      align-items-center
-      navbar-expand-lg
-      <ul class="nav nav-tabs">
-  <li role="presentation" class="active"><a href="#">Home</a></li>
-  <li role="presentation"><a href="#">Profile</a></li>
-  <li role="presentation"><a href="#">Messages</a></li>
-
-
-  <li role="presentation" class="dropdown">
-      <a  class="dropdown-toggle nav-item nav-link" id="dLabel" href="{% url 'about' %}" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-        About <span class="caret"></span>
-      </a>
-      <ul class="dropdown-menu" aria-labelledby="dLabel">
-
-        <a class="nav-item nav-link" href="https://github.com/khal33d-hub">Github</a>
-        <a class="nav-item nav-link" href="https://www.linkedin.com/in/khaleed-oyeleke-27b182195/">LinkedIn</a>
-        <li role="separator" class="divider"></li>
-        <a href="#">My socialMedia Site</a>
-
-      </ul>
-  </li>
-navbar-expand-lg
-navbar-static-top
-href="{% url 'about' %}"
-
-
-<div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Brand</a>
-    </div>
-
-  <!-- Collect the nav links, forms, and other content for toggling -->
-  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-<div class="navbar-nav align-items-center">
-{% endcomment %}
-
-    <nav class="navbar navbar-expand-lg bg-light techfont">
-    <div class="container-fluid">
-    <div class="navbar-nav align-items-center">
-
-
-
-      <a class="navbar-brand bigbrand" href="{% url 'home' %}">My Nature blog</a>
-          <a class="nav-item nav-link navbar-fixed-top" href="{% url 'post_list' %}">Posts</a>
-          <a class="nav-item nav-link" href="{% url 'about' %}">About</a>
-          <a class="nav-item nav-link" href="https://github.com/khal33d-hub">Github</a>
-          <a class="nav-item nav-link" href="https://www.linkedin.com/in/khaleed-oyeleke-27b182195/">LinkedIn</a>
-      </div>
-        </div>
-      <div class="navbar-nav align-items-center ml-auto">
         {% if user.is_authenticated %}
-          <a class="nav-item nav-link" href="{% url 'post_new' %}">New Post</a>
-          <a class="nav-item nav-link" href="{% url 'post_draft_list' %}">Drafts</a>
-          <a class="nav-item nav-link" href="{% url 'logout' %}">Log out</a>
-          <a >Welcome: {{ user.username }}</a>
+
+            <li class="nav-item">
+            <a class="nav-link" href="{% url 'post_new' %}">New Post</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="{% url 'post_draft_list' %}">Drafts</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="{% url 'logout' %}">Log out</a>
+            </li>
+          </ul>
+          <div class="alert alert-info">
+        <strong>Welcome:</strong> {{ user.username }}
+        </div>
+      </div>
+
+
+
         {% else %}
+        <ul class="navbar-right">
           <a class="nav-item nav-link" href="{% url 'login' %}" aria-label="Login">
             <span class="fa fa-user" aria-hidden="true"></span></a>
+        </ul>
+
         {% endif %}
+         </div>
+       </nav>
+
+    <canvas id="canvas"></canvas>
+      <div id="text">
+      <div id="clic" nowrap></div>
       </div>
-    </div>
-  </nav>
     {# The actual blog posts#}
     <div class="loader">
           <div class="content container">
@@ -132,11 +116,6 @@ href="{% url 'about' %}"
               </div>
           </div>
           </div>
-
-        <canvas id="canvas"></canvas>
-    <div id="text">
-    	<div id="clic" nowrap></div>
-    </div>
 
     {# SCRIPTS#}
     <script type="text/javascript" src="{% static 'jvsrpt/blog.js' %}"></script>
