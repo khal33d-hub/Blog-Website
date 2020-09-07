@@ -1,5 +1,3 @@
-$('.dropdown-toggle').dropdown()
-
 ! function () {
 
 	"use strict";
