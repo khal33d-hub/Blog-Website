@@ -25,7 +25,8 @@ SECRET_KEY = '3!uj*wyi#zjs9e&e3mm__%+373_o@1xtzhs4kf6rc%2sxuommm'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['brainonsteroids.pythonanywhere.com']
+ALLOWED_HOSTS = ['brainonsteroids.pythonanywhere.com',
+'127.0.0.1',]
 
 
 # Application definition
@@ -84,15 +85,6 @@ DATABASES = {
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
-PASSWORD_HASHERS = [
-    'django.contrib.auth.hashers.Argon2PasswordHasher',
-    'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
-    'django.contrib.auth.hashers.BCryptPasswordHasher',
-    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
-    'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
-]
-
-
 
 AUTH_PASSWORD_VALIDATORS = [
     {
