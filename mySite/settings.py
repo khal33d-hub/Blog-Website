@@ -25,7 +25,7 @@ SECRET_KEY = '3!uj*wyi#zjs9e&e3mm__%+373_o@1xtzhs4kf6rc%2sxuommm'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['brainonsteroids.pythonanywhere.com']
 
 
 # Application definition
